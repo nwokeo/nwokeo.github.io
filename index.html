@@ -13,13 +13,14 @@
     <![endif]-->
   </head>
   <body>
+    <canvas data-processing-sources="processing/Distance2D.pde"></canvas> 
     <div class="wrapper">
       <header>
         <h1>Obi Nwoke</h1>
         <p></p>
 
 
-        <p class="view"><a href="https://github.com/nwokeo">View My GitHub Profile</a></p>
+        <p class="view"><a href="https://github.com/nwokeo">GitHub</a></p>
         <p class="view"><a href="https://twitter.com/nwoke">Twitter</a></p>
         <p class="view"><a href="https://linkedin.com/in/onwoke/">LinkedIn</a></p>
 
@@ -36,17 +37,31 @@
       </footer>
       </section>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-54000937-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+    
+    <div id="debug"></div>
+      
+  <!-- PROCESSING -->
+  <script src="javascripts/processing.js"></script>
+  <script type="application/javascript">
+    var browserHeight = screen.height,
+        browserWidth = screen.width;
+    var printMessage = function (msg) {
+        document.getElementById('debug').innerHTML = "Message: " + msg;
+    };
+  </script> 
+  
+  <!-- GA -->
+  <script src="javascripts/scale.fix.js"></script>
+  <script type="text/javascript">
+          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+          try {
+            var pageTracker = _gat._getTracker("UA-54000937-1");
+          pageTracker._trackPageview();
+          } catch(err) {}
+  </script>
 
   </body>
 </html>
