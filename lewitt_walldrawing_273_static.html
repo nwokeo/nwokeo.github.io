@@ -1,0 +1,11 @@
+<html>
+<div id="observablehq-static_out-d7512492"></div>
+<script type="module">
+    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/ff73f15eebfc0424.js?v=3";
+    new Runtime().module(define, name => {
+        if (name === "static_out") return new Inspector(document.querySelector("#observablehq-static_out-d7512492"));
+        if (name === "animated_out") return new Inspector(document.querySelector("#observablehq-animated_out-d7512492"));
+    });
+</script>
+</html>
